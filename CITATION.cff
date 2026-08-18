@@ -20,3 +20,7 @@ keywords:
   - behaviour
   - planning
   - motion
+
+# A packing holds no code of its own, so it is built on nothing and says so
+# rather than leaving the half that states what it is made of absent.
+references: []
