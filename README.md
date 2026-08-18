@@ -14,10 +14,6 @@ The planner reads the ring to know where bodies and props are, and publishes int
 The motion plane reads those intents and publishes poses. Both touch the same shared memory,
 and **iceoryx2 is shared memory**, so neither can be anywhere else.
 
-That is the whole test. It is not that they are conceptually related, which would be an
-argument about naming. It is that they exchange data through a ring, which is a fact about the
-transport.
-
 ## Why they are two planes
 
 They run three orders of magnitude apart. A plan changes in seconds and a pose changes every
@@ -34,16 +30,6 @@ is current without waiting for it.
 pose into actuator commands against gravity and contact, and it lives with the crowd plane in
 the zone domain. This domain produces what a body should be doing; something else makes a body
 actually do it.
-
-## The cost
-
-ARDY wants a GPU, so a machine running this domain needs one. The planner does not. If that
-cost is not wanted, the two split: the planner stays on the ring beside the zone, and motion is
-generated offline and shipped as clips, which costs nothing at runtime and gives up the
-interactivity that made ARDY the choice.
-
-That is a real fork and both sides are legitimate. It is written here so it is decided rather
-than discovered on a bill.
 
 ## State
 
