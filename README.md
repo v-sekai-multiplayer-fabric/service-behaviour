@@ -1,7 +1,7 @@
 # fabric-behaviour-domain
 
-What a body does, and how it moves. A **domain** is a packing of planes and edge planes, and a
-ring forces co-location, so this is the pair that has to run together.
+What a body does, and how it moves. A **domain** is a packing of planes and transport layers,
+and a ring forces co-location, so this is the pair that has to run together.
 
 | plane | decides | rate |
 | --- | --- | --- |
